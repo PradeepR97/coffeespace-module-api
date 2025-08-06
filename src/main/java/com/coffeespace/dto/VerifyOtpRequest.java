@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class SendOtpRequest {
+public class VerifyOtpRequest {
     private String phoneNumber;
+    private String otp;
 }
