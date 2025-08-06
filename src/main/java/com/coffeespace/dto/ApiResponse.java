@@ -1,15 +1,16 @@
 package com.coffeespace.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class VerifyOtpRequest {
-    private String phoneNumber;
-    private String otp;
+public class ApiResponse<T> {
+    private String message;
+    private int statusCode;
+    private boolean success;
+    private T data;
 }
